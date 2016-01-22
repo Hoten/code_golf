@@ -73,7 +73,7 @@ solution(4) do
 end
 
 solution(5) do
-  puts'Dec Hex    '*2+'Dec Hex  '*4+' Dec Hex  '*2,16.times.map{|i|8.times.map{|j|(k=i+j*16;k==127?'  127 7F DEL':"#{k} #{'%.2X'%k} #{'NULSOHSTXETXEOTENQACKBELBS HT LF VT FF CR SO SI DLEDC1DC2DC3DC4NAKSYNETBCANEM SUBESCFS GS RS US  '[k*3..k*3+2]||k.chr}").rjust(j<2?10+j :9+j/6)}.join}.join(?\n)
+  a='Dec Hex  ';puts"#{a}  "*2+a*4+" #{a}"*2,16.times.map{|i|8.times.map{|j|(k=i+j*16;k==127?'  127 7F DEL':"#{k} #{'%.2X'%k} #{'NULSOHSTXETXEOTENQACKBELBS HT LF VT FF CR SO SI DLEDC1DC2DC3DC4NAKSYNETBCANEM SUBESCFS GS RS US  '[k*3..k*3+2]||k.chr}").rjust(j<2?10+j :9+j/6)}.join}
 end
 
 run
