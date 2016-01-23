@@ -39,7 +39,9 @@ def run
   solution = ARGV[1] ? @solutions[ARGV[1]] : latest_solution
 
   if command == 'test'
-    test do |*args| run_solution(solution, *args) end
+    test do |*args|
+      run_solution(solution, *args)
+    end
     puts 'correct'
   elsif command == 'score'
     if ARGV[1] == 'all'
